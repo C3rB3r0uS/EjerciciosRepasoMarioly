@@ -110,6 +110,53 @@ public class Trabajador {
             this.antiguedad = antiguedad;
 
         }
+
+    }
+
+    public double CalcularSueldo() {
+
+        double sueldo = 607;
+
+        switch (categoria) {
+
+            case 0:
+
+                sueldo = sueldo + (sueldo * 0.15);
+                break;
+
+            case 1:
+
+                sueldo = sueldo + (sueldo * 0.35);
+                break;
+
+            case 2:
+
+                sueldo = sueldo + (sueldo * 0.65);
+                break;
+
+        }
+
+        switch (antiguedad) {
+
+            case 0:
+
+                sueldo = sueldo + 150;
+                break;
+
+            case 1:
+
+                sueldo = sueldo + 300;
+                break;
+
+            case 2:
+
+                sueldo = sueldo + 600;
+                break;
+
+        }
+
+        return sueldo;
+
     }
 
 }
